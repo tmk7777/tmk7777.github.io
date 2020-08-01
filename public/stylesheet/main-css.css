@@ -23,6 +23,31 @@ body {
   padding-bottom: 150px;
 }
 
+/* ~~~~~~~ GIF before website loads start ~~~~~~ */
+
+.no-js #loader {
+  display: none;
+}
+
+.js #loader {
+  display: block;
+  position: absolute;
+  left: 100px;
+  top: 0;
+}
+
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(../files/Preloader_8.gif) center no-repeat #fff;
+}
+
+/* ~~~~~~~ GIF before website loads start ~~~~~~ */
+
 /* Row 1 Starts */
 
 #intro1 {
