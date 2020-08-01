@@ -142,9 +142,9 @@ body {
 @keyframes an {
   from {
     opacity: 0;
-    transform: perspective(500px) translate3d(-35px, -40px, -150px)
-      rotate3d(1, -1, 0, 35deg);
+    transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
   }
+
   to {
     opacity: 1;
     transform: perspective(500px) translate3d(0, 0, 0);
@@ -194,35 +194,29 @@ body {
 .illustrator,
 .vedit,
 .unity {
-  background: -webkit-linear-gradient(
-    135deg,
-    #009999 25%,
-    #008283 25%,
-    #008283 50%,
-    #009999 50%,
-    #009999 75%,
-    #008283 75%
-  );
+  background: -webkit-linear-gradient(135deg,
+      #009999 25%,
+      #008283 25%,
+      #008283 50%,
+      #009999 50%,
+      #009999 75%,
+      #008283 75%);
 
-  background: -moz-linear-gradient(
-    135deg,
-    #009999 25%,
-    #008283 25%,
-    #008283 50%,
-    #009999 50%,
-    #009999 75%,
-    #008283 75%
-  );
+  background: -moz-linear-gradient(135deg,
+      #009999 25%,
+      #008283 25%,
+      #008283 50%,
+      #009999 50%,
+      #009999 75%,
+      #008283 75%);
 
-  background: -o-linear-gradient(
-    135deg,
-    #009999 25%,
-    #008283 25%,
-    #008283 50%,
-    #009999 50%,
-    #009999 75%,
-    #008283 75%
-  );
+  background: -o-linear-gradient(135deg,
+      #009999 25%,
+      #008283 25%,
+      #008283 50%,
+      #009999 50%,
+      #009999 75%,
+      #008283 75%);
 
   /* width: 80%; */
   height: 30px;
@@ -271,6 +265,7 @@ body {
   0% {
     background-position: 0 0;
   }
+
   100% {
     background-position: 50px 50px;
   }
