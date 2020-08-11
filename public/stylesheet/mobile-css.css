@@ -1,0 +1,33 @@
+@media screen and (max-width: 481px) {
+
+    #home-row1 {
+        height: calc(var(--vh, 1vh) * 100);
+    }
+
+    #intro1 {
+        top: 40%;
+        left: 0%;
+        width: 100%;
+    }
+
+    #intro {
+        font-size: calc(var(--vh, 1vh) * 100)px;
+        width: 20rem;
+    }
+
+    .r1cl {
+        margin-bottom: 30px;
+    }
+
+    .r1cr {
+        margin-top: 30px;
+    }
+
+    #skillimage {
+        display: none;
+    }
+
+    #contactInfo {
+        margin: 30px;
+    }
+}

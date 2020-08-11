@@ -27,6 +27,13 @@
 
     window.onload = function () {
 
+        // We listen to the resize event
+        window.addEventListener('resize', () => {
+            // We execute the same script as before
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
+
         /* ~~~~~~~ GIF before website loads start ~~~~~~ */
         $(".se-pre-con").fadeOut("slow");;
 
@@ -146,98 +153,241 @@
         });
 
         // Projects Animated
+        if (window.innerWidth <= 481) {
+            var projects1 = document.getElementById('projectsAnimated1');
+            projects1.style.visibility = 'hidden';
 
-        var projects1 = document.getElementById('projectsAnimated1');
-        projects1.style.visibility = 'hidden';
+            var scrolledProjects1 = false;
 
-        var scrolledProjects1 = false;
+            $(window).scroll(function () {
+                var hT = $('#projectsAnimated').offset().top, // 1672
+                    hH = $('#projectsAnimated').outerHeight(), // 300
+                    wH = $(window).height(), // 503
+                    wS = $(this).scrollTop();
+                console.log(hT, hH, wH, wS);
+                if (wS > (hT + hH - (wH * 2.5)) && scrolledProjects1 == false) {
+                    // console.log('H1 on the view!');
+                    projects1.style.visibility = 'visible';
+                    projects1.className += ' char';
+                    scrolledProjects1 = true;
+                }
+            });
 
-        $(window).scroll(function () {
-            var hT = $('#projectsAnimated').offset().top, // 1672
-                hH = $('#projectsAnimated').outerHeight(), // 300
-                wH = $(window).height(), // 503
-                wS = $(this).scrollTop();
-            // console.log(hT, hH, wH, wS);
-            if (wS > (hT + hH - wH) && scrolledProjects1 == false) {
-                // console.log('H1 on the view!');
-                projects1.style.visibility = 'visible';
-                projects1.className += ' char';
-                scrolledProjects1 = true;
-            }
-        });
+            var projects2 = document.getElementById('projectsAnimated2');
+            projects2.style.visibility = 'hidden';
 
-        var projects2 = document.getElementById('projectsAnimated2');
-        projects2.style.visibility = 'hidden';
+            var scrolledProjects2 = false;
 
-        var scrolledProjects2 = false;
+            $(window).scroll(function () {
+                var hT = $('#projectsAnimated').offset().top, // 1672
+                    hH = $('#projectsAnimated').outerHeight(), // 300
+                    wH = $(window).height(), // 503
+                    wS = $(this).scrollTop();
+                // console.log(hT, hH, wH, wS);
+                if (wS > (hT + hH - (wH * 2.5)) && scrolledProjects2 == false) {
+                    // console.log('H1 on the view!');
+                    projects2.style.visibility = 'visible';
+                    projects2.className += ' char';
+                    scrolledProjects2 = true;
+                }
+            });
 
-        $(window).scroll(function () {
-            var hT = $('#projectsAnimated').offset().top, // 1672
-                hH = $('#projectsAnimated').outerHeight(), // 300
-                wH = $(window).height(), // 503
-                wS = $(this).scrollTop();
-            // console.log(hT, hH, wH, wS);
-            if (wS > (hT + hH - wH) && scrolledProjects2 == false) {
-                // console.log('H1 on the view!');
-                projects2.style.visibility = 'visible';
-                projects2.className += ' char';
-                scrolledProjects2 = true;
-            }
-        });
+            var projects3 = document.getElementById('projectsAnimated3');
+            projects3.style.visibility = 'hidden';
 
-        var projects3 = document.getElementById('projectsAnimated3');
-        projects3.style.visibility = 'hidden';
+            var scrolledProjects3 = false;
 
-        var scrolledProjects3 = false;
+            $(window).scroll(function () {
+                var hT = $('#projectsAnimated').offset().top, // 1672
+                    hH = $('#projectsAnimated').outerHeight(), // 300
+                    wH = $(window).height(), // 503
+                    wS = $(this).scrollTop();
+                // console.log(hT, hH, wH, wS);
+                if (wS > (hT + hH - (wH * 2.5)) && scrolledProjects3 == false) {
+                    // console.log('H1 on the view!');
+                    projects3.style.visibility = 'visible';
+                    projects3.className += ' char';
+                    scrolledProjects3 = true;
+                }
+            });
+        } else {
+            var projects1 = document.getElementById('projectsAnimated1');
+            projects1.style.visibility = 'hidden';
 
-        $(window).scroll(function () {
-            var hT = $('#projectsAnimated').offset().top, // 1672
-                hH = $('#projectsAnimated').outerHeight(), // 300
-                wH = $(window).height(), // 503
-                wS = $(this).scrollTop();
-            // console.log(hT, hH, wH, wS);
-            if (wS > (hT + hH - wH) && scrolledProjects3 == false) {
-                // console.log('H1 on the view!');
-                projects3.style.visibility = 'visible';
-                projects3.className += ' char';
-                scrolledProjects3 = true;
-            }
-        });
+            var scrolledProjects1 = false;
+
+            $(window).scroll(function () {
+                var hT = $('#projectsAnimated').offset().top, // 1672
+                    hH = $('#projectsAnimated').outerHeight(), // 300
+                    wH = $(window).height(), // 503
+                    wS = $(this).scrollTop();
+                console.log(hT, hH, wH, wS);
+                if (wS > (hT + hH - wH) && scrolledProjects1 == false) {
+                    // console.log('H1 on the view!');
+                    projects1.style.visibility = 'visible';
+                    projects1.className += ' char';
+                    scrolledProjects1 = true;
+                }
+            });
+
+            var projects2 = document.getElementById('projectsAnimated2');
+            projects2.style.visibility = 'hidden';
+
+            var scrolledProjects2 = false;
+
+            $(window).scroll(function () {
+                var hT = $('#projectsAnimated').offset().top, // 1672
+                    hH = $('#projectsAnimated').outerHeight(), // 300
+                    wH = $(window).height(), // 503
+                    wS = $(this).scrollTop();
+                // console.log(hT, hH, wH, wS);
+                if (wS > (hT + hH - wH) && scrolledProjects2 == false) {
+                    // console.log('H1 on the view!');
+                    projects2.style.visibility = 'visible';
+                    projects2.className += ' char';
+                    scrolledProjects2 = true;
+                }
+            });
+
+            var projects3 = document.getElementById('projectsAnimated3');
+            projects3.style.visibility = 'hidden';
+
+            var scrolledProjects3 = false;
+
+            $(window).scroll(function () {
+                var hT = $('#projectsAnimated').offset().top, // 1672
+                    hH = $('#projectsAnimated').outerHeight(), // 300
+                    wH = $(window).height(), // 503
+                    wS = $(this).scrollTop();
+                // console.log(hT, hH, wH, wS);
+                if (wS > (hT + hH - wH) && scrolledProjects3 == false) {
+                    // console.log('H1 on the view!');
+                    projects3.style.visibility = 'visible';
+                    projects3.className += ' char';
+                    scrolledProjects3 = true;
+                }
+            });
+        }
 
         // Contact Form Animated
 
-        var contact = document.getElementById('contact-part');
-        contact.style.visibility = 'hidden';
+        if (window.innerWidth <= 481) {
+            var contact = document.getElementById('contact-part');
+            contact.style.visibility = 'hidden';
 
-        var scrolledContact = false;
+            var scrolledContact = false;
 
-        $(window).scroll(function () {
-            var hT = $('#contact-part').offset().top, // 1672
-                hH = $('#contact-part').outerHeight(), // 300
-                wH = $(window).height(), // 503
-                wS = $(this).scrollTop();
-            // console.log(hT, hH, wH, wS);
-            if (wS > (hT + hH - wH) && scrolledContact == false) {
-                // console.log('H1 on the view!');
-                contact.style.visibility = 'visible';
-                contact.className += ' char';
-                scrolledContact = true;
+            $(window).scroll(function () {
+                var hT = $('#contact-part').offset().top, // 1672
+                    hH = $('#contact-part').outerHeight(), // 300
+                    wH = $(window).height(), // 503
+                    wS = $(this).scrollTop();
+                // console.log(hT, hH, wH, wS);
+                if (wS > (hT + hH - (wH * 1.5)) && scrolledContact == false) {
+                    // console.log('H1 on the view!');
+                    contact.style.visibility = 'visible';
+                    contact.className += ' char';
+                    scrolledContact = true;
+                }
+            });
+        } else {
+            var contact = document.getElementById('contact-part');
+            contact.style.visibility = 'hidden';
+
+            var scrolledContact = false;
+
+            $(window).scroll(function () {
+                var hT = $('#contact-part').offset().top, // 1672
+                    hH = $('#contact-part').outerHeight(), // 300
+                    wH = $(window).height(), // 503
+                    wS = $(this).scrollTop();
+                // console.log(hT, hH, wH, wS);
+                if (wS > (hT + hH - wH) && scrolledContact == false) {
+                    // console.log('H1 on the view!');
+                    contact.style.visibility = 'visible';
+                    contact.className += ' char';
+                    scrolledContact = true;
+                }
+            });
+        }
+
+        // Navbar Sticking Code while scrolling starts here-----------------
+
+        // This code executes when resize happens
+        window.addEventListener('resize', () => {
+            // We execute the same script as before
+            var navbar = document.getElementById('navbar');
+            var about = document.getElementById('about-row2');
+            if (window.innerWidth <= 481) {
+                let vh = window.innerHeight;
+
+                $(window).scroll(function () {
+                    if (window.pageYOffset >= vh) {
+                        navbar.classList.add("sticky");
+                        about.classList.add("aboutRowExtra");
+                    } else {
+                        navbar.classList.remove("sticky");
+                        about.classList.remove("aboutRowExtra");
+                    }
+                });
+            } else {
+                var sticky = navbar.offsetTop;
+
+                $(window).scroll(function () {
+                    if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky");
+                        about.classList.add("aboutRowExtra");
+                    } else {
+                        navbar.classList.remove("sticky");
+                        about.classList.remove("aboutRowExtra");
+                    }
+                });
             }
         });
 
+        // This code happens when load
         var navbar = document.getElementById('navbar');
         var about = document.getElementById('about-row2');
-        var sticky = navbar.offsetTop;
+        if (window.innerWidth <= 481) {
+            let vh = window.innerHeight;
 
-        $(window).scroll(function () {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky");
-                about.classList.add("aboutRowExtra");
-            } else {
-                navbar.classList.remove("sticky");
-                about.classList.remove("aboutRowExtra");
-            }
-        });
+            $(window).scroll(function () {
+                if (window.pageYOffset >= vh) {
+                    navbar.classList.add("sticky");
+                    about.classList.add("aboutRowExtra");
+                } else {
+                    navbar.classList.remove("sticky");
+                    about.classList.remove("aboutRowExtra");
+                }
+            });
+        } else {
+            var sticky = navbar.offsetTop;
+
+            $(window).scroll(function () {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky");
+                    about.classList.add("aboutRowExtra");
+                } else {
+                    navbar.classList.remove("sticky");
+                    about.classList.remove("aboutRowExtra");
+                }
+            });
+        }
+
+        // console.log(sticky);
+        // console.log(vh);
+
+        // $(window).scroll(function () {
+        //     if (window.pageYOffset >= sticky) {
+        //         navbar.classList.add("sticky");
+        //         about.classList.add("aboutRowExtra");
+        //     } else {
+        //         navbar.classList.remove("sticky");
+        //         about.classList.remove("aboutRowExtra");
+        //     }
+        // });
+
+        // Navbar Sticking Code while scrolling ends here-----------------
 
 
         // Smooth Scroll Action Code
