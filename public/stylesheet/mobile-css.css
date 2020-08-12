@@ -1,4 +1,9 @@
-@media screen and (max-width: 481px) {
+/* @media screen and (max-width: 481px)  */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
 
     #home-row1 {
         height: calc(var(--vh, 1vh) * 100);
@@ -21,6 +26,14 @@
 
     .r1cr {
         margin-top: 30px;
+    }
+
+    #allskills {
+        width: 90%;
+    }
+
+    .bg {
+        width: 250px;
     }
 
     #skillimage {
