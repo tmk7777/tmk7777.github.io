@@ -167,6 +167,12 @@ body {
 
 /* Row 3 Starts */
 
+#left-skills,
+#right-skills {
+  display: flex;
+  justify-content: center;
+}
+
 #skills-row3 {
   background-color: #eceff2;
 }

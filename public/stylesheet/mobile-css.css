@@ -28,8 +28,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
         margin-top: 30px;
     }
 
-    #allskills {
-        width: 90%;
+    #left-skills,
+    #right-skills {
+        padding-left: 7px;
+        padding-right: 7px;
     }
 
     .bg {
@@ -40,7 +42,22 @@ only screen and (min-device-pixel-ratio: 1.5) {
         display: none;
     }
 
+    #projectsAnimated1,
+    #projectsAnimated2,
+    #projectsAnimated3 {
+        padding: 0;
+    }
+
+    #pimg {
+        width: 380px;
+
+    }
+
     #contactInfo {
         margin: 30px;
+    }
+
+    #c {
+        font-size: calc(var(--vh, 1vh) * 100)px;
     }
 }
